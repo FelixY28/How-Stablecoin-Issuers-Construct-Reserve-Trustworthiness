@@ -115,7 +115,7 @@ def fig_phases(issuer, phase_order):
         ax.grid(axis="y", alpha=0.25)
     axes[0][0].set_ylabel("Share of paragraphs with code")
     axes[0][-1].legend(frameon=False, fontsize=8, loc="upper left", bbox_to_anchor=(1.0, 1.0))
-    fig.suptitle("Authority and stance codes across event phases (issuer texts)", x=0.01, ha="left", fontsize=12)
+    fig.suptitle("Tether: authority and stance codes across event phases (official texts)", x=0.01, ha="left", fontsize=12)
     fig.tight_layout()
     fig.savefig(FIGURES / "codes_by_phase.png", dpi=200, bbox_inches="tight")
     plt.close(fig)
@@ -142,15 +142,22 @@ def main():
     df, phase_labels = assign_phases(df)
     phase_order = ["P0", *[p for p in phase_labels if p != "P0"]]
 
-    issuer = df[df["doc_type"] != "attestation"]
+    # CEO posts on X are reported separately, never pooled with official issuer texts
+    # (decision 2026-11-22: the CEO's bio says "Views are my own"; see analysis/corpus_decisions.md)
+    issuer = df[~df["doc_type"].isin(["attestation", "x_post"])]
+    xposts = df[df["doc_type"] == "x_post"]
     attest = df[df["doc_type"] == "attestation"]
 
     md = ["# Summary tables", "",
-          f"Coded paragraphs: {len(df)} (issuer texts {len(issuer)}, attestation reports {len(attest)}).",
+          f"Coded paragraphs: {len(df)} (official issuer texts {len(issuer)}, CEO posts on X {len(xposts)}, "
+          f"attestation reports {len(attest)}).",
           "Values are the share of paragraphs carrying each code.", "",
           "## Phases", *[f"- {v}" for v in phase_labels.values()], "",
-          "## Issuer texts by company", md_table(share_table(issuer, "company", codes)), "",
-          "## Issuer texts by company and phase", md_table(share_table(issuer, ["company", "phase"], codes)), ""]
+          "## Official issuer texts by company", md_table(share_table(issuer, "company", codes)), "",
+          "## Tether official texts by phase", "Phases are drawn from Tether's event timeline; Circle's issuer texts all fall after E3, so Circle is not phased (decision D6).",
+          md_table(share_table(issuer[issuer["company"] == "Tether"], "phase", codes)), ""]
+    if len(xposts):
+        md += ["## CEO posts on X (reported separately)", md_table(share_table(xposts, ["company", "doc_id"], codes)), ""]
     if len(attest):
         md += ["## Attestation reports by company", md_table(share_table(attest, "company", codes)), ""]
     (ANALYSIS / "summary_tables.md").write_text("\n".join(md), encoding="utf-8")
@@ -158,7 +165,7 @@ def main():
 
     if len(issuer):
         fig_authority(issuer)
-        fig_phases(issuer, phase_order)
+        fig_phases(issuer[issuer["company"] == "Tether"], phase_order)
     print("Wrote analysis/summary_tables.md, analysis/examples_by_code.md and two figures in analysis/figures/")
     print("Next: read examples_by_code.md closely and write analytic memos (step 7).")
 

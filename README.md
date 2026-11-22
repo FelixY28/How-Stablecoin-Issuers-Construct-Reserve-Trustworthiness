@@ -10,7 +10,7 @@ How did Tether and Circle construct *evidence* of reserve trustworthiness in the
 
 Sub-questions:
 1. Which sources of authority does each issuer invoke: the state, professional bodies, market performance, technology, or politics?
-2. Do the claims shift around key events (S&P downgrade, Big Four audit announcement, audit result)?
+2. Do Tether's claims shift around key events (S&P downgrade, Big Four audit announcement, audit result)? Circle's texts all fall after the S&P downgrade, so Circle is not compared across phases.
 3. How does the assurance claimed in press releases compare with the assurance actually provided in attestation reports?
 
 ## Data

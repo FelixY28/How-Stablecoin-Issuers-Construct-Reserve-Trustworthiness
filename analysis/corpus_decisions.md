@@ -8,7 +8,7 @@ Every decision about what enters the corpus, with the reason. Audit trail alongs
 - **Reason:** they are different channels of evidence talk. Keeping them apart lets the analysis compare what the company says officially, what the CEO says personally, and what reaches readers through a journalist's selection.
 - **Caveat:** the media quote is secondary; the journalist chose which sentences appear.
 - **T-X-20251130 in scope:** although it replies to Arthur Hayes, the post names S&P's method directly ("S&P made the same mistake..."). Text copied by hand from X on 2026-11-22.
-- **Open:** the CEO's X bio says "Views are my own". Decide whether x_post documents are excluded, kept but reported separately from official texts, or pooled.
+- **x_post reported separately (decided 2026-11-22):** the CEO's X bio says "Views are my own", so his posts are not pooled with official texts in code shares; they get their own table and are used in close reading and the channel comparison.
 
 ## D2 — GENIUS Act signing-day statements (E1), 2026-11-22
 - **Problem:** neither issuer published a statement on the signing day. Nearest texts: Circle's blog on House passage (2025-07-17, falls in P0) and Tether's Q2 2025 attestation press release (late July, a different genre).
@@ -34,3 +34,8 @@ Every decision about what enters the corpus, with the reason. Audit trail alongs
 ## D5 — Auditor procedure lists, 2026-11-22
 - **Decision:** keep each bulleted list of procedures in the attestation reports ("we carried out the following procedures: ...") as one segment.
 - **Reason:** the comparison in sub-question 3 is about the overall depth of the assurance work, which the list expresses as a whole.
+
+## D6 — Event phases, 2026-11-22
+- **Problem:** all five Circle issuer texts date from 2025-12-12 or later, i.e. after E3, so no phase scheme can compare Circle before and after an event. A scheme using only the shared events E1 and E3 was considered and rejected: it would reduce Tether to one text in P1 against all others, losing the Big Four announcement (E6) and audit result (E8).
+- **Decision:** phases P0-P4 (starting at E1, E3, E6, E8) are applied to Tether only; Circle is reported as one period and read closely around its own events (E4, E7). Sub-question 2 is restated for Tether.
+- **Caveat:** each Tether phase holds only one or two documents; phase shares describe those documents, not a trend.
