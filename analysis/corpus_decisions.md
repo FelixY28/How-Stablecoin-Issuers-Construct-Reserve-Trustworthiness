@@ -26,7 +26,11 @@ Every decision about what enters the corpus, with the reason. Audit trail alongs
 - **Decision:** delete forward-looking-statement notices, endorsement disclaimers and numbered product footnotes from issuer texts (rule `DISCLAIMER` in `scripts/02_clean_segment.py`).
 - **Reason:** readers do not read them, and they are legal boilerplate rather than the issuer constructing trust.
 - **Not applied to attestation reports:** their limitation and restriction-of-use clauses are data for sub-question 3.
-- **Open:** the USAT "not legal tender / not backed by the U.S. government" notice (T-PR-20260127) is kept pending a decision.
+- **Exception kept:** the USAT "not legal tender / not issued, backed or approved by the U.S. government" notice (T-PR-20260127). It is a disclaimer, but its content explicitly denies state backing, which bears directly on AUTH_STATE.
 
 ## Cleaning fix (not a decision) — tether.io "latest news" block, 2026-11-22
 - The downloaded tether.io pages include a "latest news" block dated 19 November 2026 (the download date), which is not part of the press releases. Removed at HTML parsing.
+
+## D5 — Auditor procedure lists, 2026-11-22
+- **Decision:** keep each bulleted list of procedures in the attestation reports ("we carried out the following procedures: ...") as one segment.
+- **Reason:** the comparison in sub-question 3 is about the overall depth of the assurance work, which the list expresses as a whole.
