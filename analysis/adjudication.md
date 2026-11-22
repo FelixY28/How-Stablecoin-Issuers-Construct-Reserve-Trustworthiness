@@ -15,3 +15,6 @@ Each of the 29 segment-code disagreements was sorted into three groups; the rese
 2. **The human reference was shaped by feedback.** After the development round the researcher received feedback stressing that most paragraphs carry no code. The blind codes then swung from over-coding (CONFIRMATION 13/20 in development) to under-coding (AUTH_MARKET, AUTH_POLITICAL, CONFIRMATION 0/30). Most disagreements are human omissions, so the original kappa understates how well the LLM follows the codebook.
 3. **Three definitional grey zones remain** (group C above): institutional adoption, "step forward" audit framing, and general statements about trust.
 4. **LLM**: a single model (DeepSeek), one run, temperature 0; no second model was compared.
+
+## Which codes the analysis uses (decided 2026-11-22)
+The descriptive analysis (`06_analysis.py`, default) uses the **LLM codes for every segment**, so all 271 issuer segments are coded by one consistent coder under codebook v0.2. The researcher's blind codes (original and adjudicated) serve only to validate the LLM. `06_analysis.py --use-human` reproduces the alternative in which adjudicated human codes replace the LLM codes for the 30 validation segments; the main patterns are the same under both.

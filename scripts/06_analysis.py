@@ -1,10 +1,11 @@
 """Step 6: descriptive analysis of the coded segments.
 
 Usage:
-    python scripts/06_analysis.py
+    python scripts/06_analysis.py               # LLM codes everywhere (default)
+    python scripts/06_analysis.py --use-human   # replace with manual codes; only after reconciling disagreements
 
 Input : data/segments.csv, data/coded_llm.csv, data/events.csv,
-        analysis/manual_coding.csv (optional: your codes replace the LLM codes for those segments)
+        analysis/manual_coding.csv (read only with --use-human)
 Output: analysis/summary_tables.md
         analysis/examples_by_code.md      paragraphs to read closely (step 7)
         analysis/figures/authority_by_company.png
@@ -13,6 +14,8 @@ Output: analysis/summary_tables.md
 These are descriptive shares from a small corpus. They point you to where to read closely;
 they are not statistical tests.
 """
+import argparse
+
 import matplotlib
 
 matplotlib.use("Agg")
@@ -46,13 +49,22 @@ def assign_phases(df: pd.DataFrame) -> pd.DataFrame:
     return df, labels
 
 
-def load_coded(codes):
+def load_coded(codes, use_human=False):
+    """LLM codes for every segment (one consistent coder).
+
+    The manual sample is for validation only (05_agreement.py). Pass --use-human to
+    overwrite LLM codes with manual codes, but only after you have reconciled the
+    disagreements; otherwise two coders with different thresholds get mixed.
+    """
     segs = pd.read_csv(SEGMENTS)
     llm = pd.read_csv(CODED_LLM)
     if (llm.get("model") == "DRY_RUN").any():
         print("WARNING: using DRY_RUN codes. Figures are for testing the pipeline only.")
     df = segs.merge(llm[["segment_id", *codes, "uncertain"]], on="segment_id", how="inner")
     df["source"] = "llm"
+    if not use_human:
+        print("Using LLM codes for all segments; manual codes are kept for validation only.")
+        return df
     if MANUAL.exists():
         man = pd.read_csv(MANUAL)
         man[codes] = man[codes].apply(pd.to_numeric, errors="coerce")
@@ -138,7 +150,11 @@ def examples(df, codes, k=4):
 def main():
     codes = code_names(load_codebook())
     FIGURES.mkdir(parents=True, exist_ok=True)
-    df = load_coded(codes)
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--use-human", action="store_true",
+                    help="replace LLM codes with manual codes (only after reconciling disagreements)")
+    args = ap.parse_args()
+    df = load_coded(codes, use_human=args.use_human)
     df, phase_labels = assign_phases(df)
     phase_order = ["P0", *[p for p in phase_labels if p != "P0"]]
 
@@ -150,7 +166,7 @@ def main():
 
     md = ["# Summary tables", "",
           f"Coded paragraphs: {len(df)} (official issuer texts {len(issuer)}, CEO posts on X {len(xposts)}, "
-          f"attestation reports {len(attest)}).",
+          f"attestation reports {len(attest)}). Codes: {'human where coded, LLM elsewhere' if args.use_human else 'LLM for every segment'}.",
           "Values are the share of paragraphs carrying each code.", "",
           "## Phases", *[f"- {v}" for v in phase_labels.values()], "",
           "## Official issuer texts by company", md_table(share_table(issuer, "company", codes)), "",
