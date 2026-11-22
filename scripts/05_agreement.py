@@ -30,7 +30,9 @@ def main():
     codes = code_names(load_codebook())
     human = pd.read_csv(MANUAL)
     llm = pd.read_csv(CODED_LLM)
-    human[codes] = human[codes].apply(pd.to_numeric, errors="coerce").fillna(0).astype(int).clip(0, 1)
+    human[codes] = human[codes].apply(pd.to_numeric, errors="coerce")
+    human = human.dropna(subset=codes, how="all")  # compare only segments you actually coded
+    human[codes] = human[codes].fillna(0).astype(int).clip(0, 1)
 
     m = human.merge(llm[["segment_id", *codes, "rationale"]], on="segment_id",
                     suffixes=("_human", "_llm"))
