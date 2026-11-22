@@ -21,3 +21,12 @@ Every decision about what enters the corpus, with the reason. Audit trail alongs
 - **Problem:** no issuer text in the corpus falls near E9 (2026-10-21).
 - **Decision:** remove E9 from `events.csv` and from sub-question 2; the study period now ends with E8 (August 2026).
 - **Reason:** insufficient evidence to say anything about shifts around E9. Listed under future work.
+
+## D4 — Legal disclaimers in issuer texts, 2026-11-22
+- **Decision:** delete forward-looking-statement notices, endorsement disclaimers and numbered product footnotes from issuer texts (rule `DISCLAIMER` in `scripts/02_clean_segment.py`).
+- **Reason:** readers do not read them, and they are legal boilerplate rather than the issuer constructing trust.
+- **Not applied to attestation reports:** their limitation and restriction-of-use clauses are data for sub-question 3.
+- **Open:** the USAT "not legal tender / not backed by the U.S. government" notice (T-PR-20260127) is kept pending a decision.
+
+## Cleaning fix (not a decision) — tether.io "latest news" block, 2026-11-22
+- The downloaded tether.io pages include a "latest news" block dated 19 November 2026 (the download date), which is not part of the press releases. Removed at HTML parsing.

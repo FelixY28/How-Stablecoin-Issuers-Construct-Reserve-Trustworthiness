@@ -32,6 +32,19 @@ RUNNING_HEADER = re.compile(r"\|.*\bPage \d+ of \d+\s*$", re.I)
 # auditor letterhead (BDO Italia legal registration block and office list)
 LETTERHEAD = re.compile(r"(Sede Legale|Codice Fiscale|Partita IVA|Registro dei Revisori|^Bari, Bologna)", re.I)
 
+# Legal disclaimers in ISSUER texts (decision 2026-11-22: delete; see analysis/corpus_decisions.md D4):
+# forward-looking-statement notices, endorsement disclaimers, and numbered product footnotes
+# ("1 USDC is issued through regulated affiliates of Circle..."). Not applied to attestation
+# reports: their limitation and restriction clauses are data for sub-question 3.
+MONTHS = "January|February|March|April|May|June|July|August|September|October|November|December"
+DISCLAIMER = re.compile(
+    r"(forward-looking statements|Private Securities Litigation Reform Act|"
+    r"does not constitute an implied or express endorsement|"
+    rf"^\d{{1,2}} (?!(?:{MONTHS}) )[A-Z])")
+
+# Website blocks that are not part of the document (e.g. tether.io "latest news" under each post)
+NOT_CONTENT_CLASS = re.compile(r"(latest-news|related|single-post__bottom)", re.I)
+
 
 def norm_space(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
@@ -41,6 +54,8 @@ def norm_space(s: str) -> str:
 def html_paragraphs(path) -> list[str]:
     soup = BeautifulSoup(path.read_bytes(), "html.parser")
     for tag in soup(["script", "style", "noscript", "nav", "footer", "header", "aside", "form", "svg"]):
+        tag.decompose()
+    for tag in soup.find_all(class_=NOT_CONTENT_CLASS):
         tag.decompose()
     # first container that actually holds text (some sites ship an empty <article>)
     candidates = [soup.find("article"), soup.find("main"), soup.body, soup]
@@ -158,7 +173,9 @@ def main():
         # hand-saved .txt files (X posts, media quotes) are curated: keep short lines such as
         # "We wear your loathing with pride." that the length filter would otherwise drop
         min_chars = 1 if path.suffix == ".txt" else MIN_CHARS
-        kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120]) and not LETTERHEAD.search(p)]
+        is_issuer = m["doc_type"] != "attestation"
+        kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120])
+                and not LETTERHEAD.search(p) and not (is_issuer and DISCLAIMER.search(p))]
         # drop exact duplicates within a document
         seen, unique = set(), []
         for p in kept:
