@@ -1,0 +1,115 @@
+# Codebook v0.2 — How stablecoin issuers construct evidence of reserve trustworthiness
+# Unit of coding: one paragraph (segment) of an ISSUER text. A segment may receive zero, one or several codes.
+# Revised from v0.1 after hand-coding 20 development segments (see codebook/CHANGELOG.md, rules R1-R6).
+# Attestation reports are not coded with this codebook (R5); they are compared by hand in
+# analysis/report_comparison.md.
+
+version: "0.2"
+
+instructions: >
+  You are coding paragraphs from stablecoin issuers' public texts (press releases, blog posts,
+  annual letters, earnings releases, CEO posts on X, statements quoted in the media).
+  For each paragraph, decide which codes apply.
+  GENERAL RULES.
+  (1) Most paragraphs receive no code. Code a paragraph only when it argues, states or implies why
+  the issuer, its stablecoin or its reserves should be trusted or regarded as legitimate.
+  Accounting explanations, descriptions of assets or products, financial figures reported without
+  being used as grounds for trust, headings and titles receive no code.
+  (2) Code the function of the text, not its keywords: a paragraph that mentions a law, a number or
+  a future date does not get a code for that mention alone.
+  (3) Code each paragraph on its own. Do not use what you know about the surrounding document or
+  events: a paragraph from a response to a critic is REBUTTAL only if the paragraph itself disputes
+  the criticism.
+  (4) Do not judge whether the claims are true; code what the text does.
+  Apply a code only when the paragraph clearly fits its definition. A paragraph can have several
+  codes or none.
+
+codes:
+  AUTH_STATE:
+    label: State authority
+    definition: The text invokes law, a regulator, a licence or charter, regulatory standards, or government supervision as grounds for trust.
+    include: References to the GENIUS Act, OCC, HKMA, MiCA, a bank or trust charter, being "federally regulated", "U.S.-regulated", "licensed", "compliant", or governed by regulatory standards.
+    exclude: Mentions of law or regulation that are not used as grounds for trust (e.g., neutral news about a bill, a legal definition). National interest, dollar dominance or political figures (code AUTH_POLITICAL instead).
+    examples:
+      - "a federally regulated, dollar-backed stablecoin"
+      - "places Circle National Trust under direct federal oversight by the OCC"
+      - "a U.S.-regulated stablecoin ... governed by strict regulatory standards"
+
+  AUTH_PROF:
+    label: Professional authority
+    definition: The text invokes auditors, accountants, accounting or attestation standards, or rating agencies as grounds for trust.
+    include: Big Four, named audit firms, AICPA, "attestation", "audit opinion", "audit standard".
+    exclude: The issuer's own description of its internal controls (code SELF_ASSURANCE instead).
+    examples:
+      - "already operating at Big Four audit standard"
+      - "an unqualified audit opinion"
+
+  AUTH_MARKET:
+    label: Market performance
+    definition: The text invokes track record, size, liquidity, redemption history or market adoption as grounds for trust.
+    include: Market capitalisation, redemption volumes or record, years of stable operation, user numbers, market leadership used as proof of reliability.
+    exclude: Financial results reported without being used as grounds for trust (e.g., revenue or expense figures in an earnings release).
+    examples:
+      - "processed billions in redemptions while maintaining uninterrupted stability"
+      - "Tether has never refused a redemption request from a verified user"
+
+  AUTH_TECH:
+    label: Technical authority
+    definition: The text invokes on-chain transparency, verifiability, or technical infrastructure as grounds for trust.
+    include: On-chain reserve addresses, real-time verification, proof-of-reserves, programmability presented as safety.
+    exclude: General product or technology descriptions not tied to trust or verification.
+    examples:
+      - "anyone can verify the supply on-chain in real time"
+
+  AUTH_POLITICAL:
+    label: Political or national-interest framing
+    definition: The text invokes national strategy, dollar dominance, geopolitical competition, or political figures as grounds for legitimacy.
+    include: Phrases such as "strengthen the dollar", "America's role", "made in America", countries competing over the future of money; endorsement by or association with officials.
+    exclude: Neutral mentions of policy or of a person's job title. Being regulated or compliant (code AUTH_STATE instead).
+    examples:
+      - "designed to strengthen America's role in the global economy"
+      - "reinforces the strength of the U.S. dollar at a moment when countries are competing to shape the future of money"
+
+  SELF_ASSURANCE:
+    label: Self-assurance
+    definition: The issuer asserts its own governance, risk management, transparency, integrity or full backing without invoking an external party.
+    include: Claims such as "rigorous risk management", "industry-leading transparency", "fully backed" or "trusted digital money" asserted by the issuer itself.
+    exclude: Paragraphs where the assurance comes from a named external party (code AUTH_PROF or AUTH_STATE). General pride or optimism with no claim about trustworthiness.
+    examples:
+      - "operated with world-class risk management"
+
+  HEDGE_PENDING:
+    label: Pending or incomplete claim
+    definition: The text signals that compliance, regulatory approval, an audit or verification, or a similar trust-related commitment has not yet been achieved.
+    include: designed to comply, progressing towards compliance or an audit, intends to, expects approval, subject to approval, will be regulated.
+    exclude: Statements of completed actions. General ambitions, visions or outlooks that are not about compliance, approval, audit or verification ("just getting started", "we are focused on scaling").
+    examples:
+      - "progressing towards GENIUS Act compliance"
+      - "designed to operate within the GENIUS Act framework"
+
+  REBUTTAL:
+    label: Rebuttal
+    definition: The paragraph itself directly disputes an external criticism, rating, report, or regulatory concern.
+    include: Responses to rating agencies, journalists, critics, short-sellers, or regulators' concerns.
+    exclude: General self-promotion that does not respond to a specific criticism, even if the document as a whole is a response to one.
+    examples:
+      - "strongly disagrees with the assessment"
+
+  CONFIRMATION:
+    label: Confirmation narrative
+    definition: >
+      The text frames an external requirement, standard or validation as confirming what the issuer
+      already did, rather than as forcing change. Apply only if BOTH hold: (a) the paragraph names
+      or clearly refers to an external requirement, standard, approval or validation, and (b) it
+      says or implies that the issuer already met it or that it validates the issuer's existing
+      approach. If only (b) holds, code SELF_ASSURANCE instead.
+    include: Framings such as "the law aligns with our standards", "we were already operating at that standard" or "this validates our approach".
+    exclude: Texts that acknowledge the issuer had to change its practices. Self-praise with no external requirement or validation.
+    examples:
+      - "aligned statutory requirements with Circle's standards"
+      - "the organization is already operating at Big Four audit standard"
+      - "advancing regulatory milestones ... marked a pivotal validation of that hard-fought approach"
+
+output_format: >
+  Return only JSON: {"codes": [list of code names], "uncertain": true/false,
+  "rationale": "one short sentence"}. Use [] when no code applies.

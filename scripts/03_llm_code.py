@@ -126,6 +126,8 @@ def main():
     ap.add_argument("--limit", type=int, default=0, help="only code the first N uncoded segments")
     ap.add_argument("--dry-run", action="store_true", help="keyword rules, no API (testing only)")
     ap.add_argument("--sleep", type=float, default=0.5, help="seconds between API calls")
+    ap.add_argument("--include-attestation", action="store_true",
+                    help="also code attestation reports (codebook v0.2 R5: issuer texts only by default)")
     args = ap.parse_args()
 
     cb = load_codebook()
@@ -136,6 +138,8 @@ def main():
     system = build_system_prompt(cb)
 
     segs = pd.read_csv(SEGMENTS, dtype={"segment_id": str})
+    if not args.include_attestation:
+        segs = segs[segs["doc_type"] != "attestation"]
     cache = load_cache()
     todo = [s for _, s in segs.iterrows() if (s["segment_id"], version, model) not in cache]
     if args.limit:

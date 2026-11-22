@@ -1,7 +1,8 @@
 """Merge codes entered on the phone coding page into analysis/dev_coding.csv.
 
 Usage:
-    python import_dev_coding.py <dir>
+    python import_dev_coding.py <dir>              # -> analysis/dev_coding.csv
+    python import_dev_coding.py <dir> --blind      # -> analysis/manual_coding.csv (step 5)
 
 <dir> holds one JSON file per segment, as exported from the coding page's database
 (collection "dev": {segment_id, codes: [...], none: bool, notes: str, updatedAt}).
@@ -14,15 +15,16 @@ from pathlib import Path
 
 import pandas as pd
 
-from common import ANALYSIS, code_names, load_codebook
+from common import ANALYSIS, MANUAL, code_names, load_codebook
 
 DEV = ANALYSIS / "dev_coding.csv"
 
 
 def main():
     src = Path(sys.argv[1])
+    target = MANUAL if "--blind" in sys.argv else DEV
     codes = code_names(load_codebook())
-    dev = pd.read_csv(DEV, dtype=str).fillna("")
+    dev = pd.read_csv(target, dtype=str).fillna("")
     recs = {}
     for f in src.rglob("*.json"):
         d = json.loads(f.read_text(encoding="utf-8"))
@@ -40,8 +42,8 @@ def main():
         dev.at[i, "notes"] = (r.get("notes") or "").strip()
         filled += 1
 
-    dev.to_csv(DEV, index=False, encoding="utf-8-sig")
-    print(f"{filled}/{len(dev)} segments coded -> {DEV}")
+    dev.to_csv(target, index=False, encoding="utf-8-sig")
+    print(f"{filled}/{len(dev)} segments coded -> {target}")
     missing = dev.loc[dev[codes[0]] == "", "segment_id"].tolist()
     if missing:
         print("not yet coded:", ", ".join(missing))

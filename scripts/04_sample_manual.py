@@ -47,6 +47,8 @@ def stratified(segs: pd.DataFrame, n: int, seed: int, issuer_share: float | None
             shares = pd.Series({"issuer": issuer_share, "attestation": 1 - issuer_share})
             shares = shares[shares.index.isin(comp["doc_group"].unique())]
         for grp, share in shares.items():
+            if share <= 0:
+                continue
             g = comp[comp["doc_group"] == grp]
             k = min(len(g), max(1, round(per_company * share)))
             parts.append(g.sample(k, random_state=seed))
