@@ -6,3 +6,4 @@ data/llm_cache.jsonl
 __pycache__/
 .DS_Store
 analysis/_phone_export/
+analysis/_phone_export_blind/
