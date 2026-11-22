@@ -1,21 +1,21 @@
-doc_id,company,doc_type,date,event_tag,title,url,notes
-T-PR-20260324,Tether,press_release,2026-03-24,E6,Tether Signs Big Four Firm to Complete First Full Audit,https://tether.io/?p=2512,verified link
-T-PR-20260813,Tether,press_release,2026-08-13,E8,KPMG unqualified opinion announcement,,search tether.io news for KPMG audit August 2026
-T-PR-20251126,Tether,press_release,2025-11-26,E3,Response to S&P downgrade,,search tether.io or Ardoino X posts; if only an X post exists save text to data/raw/T-PR-20251126.txt
-T-PR-20250912,Tether,press_release,2025-09-12,E2,USAT announcement and Bo Hines appointment,,search tether.io news September 2025
-T-PR-20260127,Tether,press_release,2026-01-27,E5,USAT launch,,search tether.io news January 2026
-T-PR-20250718,Tether,press_release,2025-07-18,E1,Statement on GENIUS Act signing,,search tether.io news July 2025
-C-PR-20250718,Circle,press_release,2025-07-18,E1,Statement on GENIUS Act signing,,search circle.com blog or pressroom July 2025
-C-PR-20251212,Circle,press_release,2025-12-12,E4,OCC conditional approval of national trust charter,,search circle.com pressroom December 2025; correct the date
-C-PR-20260710,Circle,press_release,2026-07-10,E7,Circle Receives Final OCC Approval to Establish National Trust Bank,https://lasvegassun.com/news/2026/jul/10/circle-receives-final-occ-approval-to-establish-na/,Business Wire copy; replace with circle.com original if found
-C-PR-20260225,Circle,earnings_release,2026-02-25,,Circle Q4 and FY2025 results,https://sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm,verified link (SEC EDGAR exhibit)
-C-AL-2025,Circle,annual_letter,2026-03-09,,Circle 2025 Annual Report - letter to stockholders,https://s206.q4cdn.com/265218871/files/doc_financials/2025/ar/CRCL_AR_2026_WO13_WKV_PR-1.pdf,verified link; date is approximate
-C-YR-2025,Circle,blog,2025-12-31,,Circle's 2025 Year in Review,https://www.circle.com/executiveinsights/circle-2025-year-in-review,verified link; check publication date
-T-AR-2025Q1,Tether,attestation,2025-03-31,,BDO independent auditors' report on reserves Q1 2025,,download PDF from https://tether.to/en/transparency/
-T-AR-2025Q4,Tether,attestation,2025-12-31,,BDO independent auditors' report on reserves Q4 2025,,download PDF from https://tether.to/en/transparency/
-T-AR-2026Q1,Tether,attestation,2026-03-31,,BDO independent auditors' report on reserves Q1 2026,,download PDF from https://tether.to/en/transparency/
-T-AR-2026Q2,Tether,attestation,2026-06-30,,BDO independent auditors' report on reserves Q2 2026,,download PDF from https://tether.to/en/transparency/
-C-AR-202503,Circle,attestation,2025-03-31,,USDC reserve report March 2025,,download PDF from https://www.circle.com/transparency
-C-AR-202512,Circle,attestation,2025-12-31,,USDC reserve report December 2025,,download PDF from https://www.circle.com/transparency
-C-AR-202603,Circle,attestation,2026-03-31,,USDC reserve report March 2026,,download PDF from https://www.circle.com/transparency
-C-AR-202606,Circle,attestation,2026-06-30,,USDC reserve report June 2026,,download PDF from https://www.circle.com/transparency
+doc_id,company,doc_type,date,event_tag,title,url,notes,pdf_pages
+T-PR-20260324,Tether,press_release,2026-03-24,E6,Tether Signs Big Four Firm to Complete First Full Audit,https://tether.io/?p=2512,verified link,
+T-PR-20260813,Tether,press_release,2026-08-13,E8,Tether Completes the Largest Inaugural Financial Audit in History,https://tether.io/news/tether-completes-the-largest-inaugural-financial-audit-in-history/,found 2026-11-22 (tether.io original),
+T-PR-20251126,Tether,press_release,2025-11-26,E3,Response to S&P downgrade,,DECISION NEEDED: no tether.io release found. Statement exists only as a spokesperson quote in media (Decrypt/Reuters) and Ardoino X posts (26 Nov 2025). Options: save the X posts as .txt / use media-quoted statement (flag as secondary) / drop,
+T-PR-20250912,Tether,press_release,2025-09-12,E2,Tether Unveils USAT and Will Appoint Bo Hines as CEO of Tether USAT,https://tether.io/news/tether-unveils-usat-its-planned-u-s-regulated-dollar-backed-stablecoin-and-will-appoint-bo-hines-as-ceo-of-tether-usat/,found 2026-11-22 (tether.io original),
+T-PR-20260127,Tether,press_release,2026-01-27,E5,"Tether Announces the Launch of USAT, the Federally Regulated, Dollar-Backed Stablecoin, Made in America",https://tether.io/news/tether-announces-the-launch-of-usat-the-federally-regulated-dollar-backed-stablecoin-made-in-america/,found 2026-11-22 (tether.io original),
+T-PR-20250718,Tether,press_release,2025-07-18,E1,Statement on GENIUS Act signing,,DECISION NEEDED: no signing-day release on tether.io. Ardoino attended the signing and spoke to media. Nearest Tether text: Q2 2025 attestation press release (late July 2025) mentions GENIUS Act. Options: substitute / X post / drop,
+C-PR-20250718,Circle,press_release,2025-07-18,E1,Statement on GENIUS Act signing,,DECISION NEEDED: no signing-day post found. Nearest: https://www.circle.com/blog/u-s-congress-passes-historic-stablecoin-bill (House passage 2025-07-17). If substituted change date and title,
+C-PR-20251212,Circle,press_release,2025-12-12,E4,Circle Receives Conditional Approval from OCC for National Trust Charter,https://www.circle.com/pressroom/circle-receives-conditional-approval-from-occ-for-national-trust-charter,found 2026-11-22 (circle.com original); date confirmed,
+C-PR-20260710,Circle,press_release,2026-07-10,E7,Circle Receives Final OCC Approval to Establish National Trust Bank,https://www.circle.com/pressroom/circle-receives-final-occ-approval-to-establish-national-trust-bank,replaced Business Wire copy with circle.com original 2026-11-22,
+C-PR-20260225,Circle,earnings_release,2026-02-25,,Circle Q4 and FY2025 results,https://www.circle.com/pressroom/circle-reports-fourth-quarter-and-full-fiscal-year-2025-financial-results,circle.com original; SEC EDGAR copy (blocks scripts) https://sec.gov/Archives/edgar/data/1876042/000187604226000032/final_circlereportsfourt.htm,
+C-AL-2025,Circle,annual_letter,2026-03-09,,Circle 2025 Annual Report - letter to stockholders,https://s206.q4cdn.com/265218871/files/doc_financials/2025/ar/CRCL_AR_2026_WO13_WKV_PR-1.pdf,"verified link; date is approximate; PDF is the full Annual Report incl. 10-K, pdf_pages=2-5 keeps only the letter to stockholders",2-5
+C-YR-2025,Circle,blog,2025-12-31,,Circle's 2025 Year in Review,https://www.circle.com/executiveinsights/circle-2025-year-in-review,verified link; check publication date,
+T-AR-2025Q1,Tether,attestation,2025-03-31,,BDO independent auditors' report on reserves Q1 2025,,download PDF from https://tether.to/en/transparency/,
+T-AR-2025Q4,Tether,attestation,2025-12-31,,BDO independent auditors' report on reserves Q4 2025,,download PDF from https://tether.to/en/transparency/,
+T-AR-2026Q1,Tether,attestation,2026-03-31,,BDO independent auditors' report on reserves Q1 2026,,download PDF from https://tether.to/en/transparency/,
+T-AR-2026Q2,Tether,attestation,2026-06-30,,BDO independent auditors' report on reserves Q2 2026,,download PDF from https://tether.to/en/transparency/,
+C-AR-202503,Circle,attestation,2025-03-31,,USDC reserve report March 2025,,download PDF from https://www.circle.com/transparency,
+C-AR-202512,Circle,attestation,2025-12-31,,USDC reserve report December 2025,,download PDF from https://www.circle.com/transparency,
+C-AR-202603,Circle,attestation,2026-03-31,,USDC reserve report March 2026,,download PDF from https://www.circle.com/transparency,
+C-AR-202606,Circle,attestation,2026-06-30,,USDC reserve report June 2026,,download PDF from https://www.circle.com/transparency,

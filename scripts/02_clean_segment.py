@@ -35,7 +35,9 @@ def html_paragraphs(path) -> list[str]:
     soup = BeautifulSoup(path.read_bytes(), "html.parser")
     for tag in soup(["script", "style", "noscript", "nav", "footer", "header", "aside", "form", "svg"]):
         tag.decompose()
-    root = soup.find("article") or soup.find("main") or soup.body or soup
+    # first container that actually holds text (some sites ship an empty <article>)
+    candidates = [soup.find("article"), soup.find("main"), soup.body, soup]
+    root = next(c for c in candidates if c is not None and len(c.get_text(strip=True)) > 200 or c is soup)
     paras = []
     for el in root.find_all(["p", "li", "h2", "h3", "blockquote"]):
         # skip elements nested in another collected element (e.g. <p> inside <li>)
@@ -62,9 +64,22 @@ def is_heading(line: str) -> bool:
     return caps >= 0.6 * sum(w[0].isalpha() for w in words)
 
 
-def pdf_paragraphs(path) -> tuple[list[str], int]:
+def parse_pages(spec: str, n: int) -> list[int]:
+    """'2-5' or '2-5,9' (1-based, inclusive) -> 0-based page indices. Empty = all pages."""
+    if not spec.strip():
+        return list(range(n))
+    idx = []
+    for part in spec.split(","):
+        a, _, b = part.strip().partition("-")
+        idx += range(int(a) - 1, int(b or a))
+    return [i for i in idx if 0 <= i < n]
+
+
+def pdf_paragraphs(path, page_spec: str = "") -> tuple[list[str], int]:
     with pdfplumber.open(path) as pdf:
-        pages = [(p.extract_text() or "") for p in pdf.pages]
+        # use_text_flow follows the PDF's content order, which keeps multi-column layouts readable
+        pages = [(pdf.pages[i].extract_text(use_text_flow=True) or "")
+                 for i in parse_pages(page_spec, len(pdf.pages))]
     n_pages = len(pages)
     total_chars = sum(len(p) for p in pages)
 
@@ -118,7 +133,7 @@ def main():
             continue
         note = ""
         if path.suffix == ".pdf":
-            paras, chars = pdf_paragraphs(path)
+            paras, chars = pdf_paragraphs(path, m.get("pdf_pages", ""))
             if chars < 500:
                 note = "very little text: probably a scanned PDF, needs OCR"
         elif path.suffix in (".html", ".htm"):

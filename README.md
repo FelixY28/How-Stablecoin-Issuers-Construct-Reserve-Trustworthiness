@@ -1,6 +1,6 @@
 # Evidence Talk: How Stablecoin Issuers Construct Reserve Trustworthiness (2025–2026)
 
-A small mixed-methods study of how Tether and Circle build claims of reserve trustworthiness in their public texts, from the signing of the US GENIUS Act (July 2025) to the OCC's final implementing rule (November 2026).
+A small mixed-methods study of how Tether and Circle build claims of reserve trustworthiness in their public texts, from the signing of the US GENIUS Act (July 2025) to the OCC's final implementing rule (October 2026).
 
 > Status: work in progress. Findings below are placeholders until the coding is complete.
 
@@ -56,8 +56,9 @@ pip install -r requirements.txt
 cd scripts
 python 01_collect.py
 python 02_clean_segment.py
+python 04_sample_manual.py --dev # 30 development segments -> analysis/dev_coding.csv; revise codebook
 python 03_llm_code.py            # needs ANTHROPIC_API_KEY, or see the script header for other providers
-python 04_sample_manual.py       # then code analysis/manual_coding.csv by hand
+python 04_sample_manual.py       # blind validation sample (excludes dev segments); code analysis/manual_coding.csv by hand
 python 05_agreement.py
 python 06_analysis.py
 ```

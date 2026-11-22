@@ -45,27 +45,30 @@ python 02_clean_segment.py
 
 这一步最重要，不要跳过。
 1. 打开 `codebook/codebook_v0.1.yaml`，通读九个代码
-2. 在 `segments.csv` 里挑30段（两家公司各半），自己贴标签
+2. 运行 `python 04_sample_manual.py --dev`，生成 `analysis/dev_coding.csv`（30段，两家公司各半），用 Excel 打开自己贴标签。这30段之后会自动排除在第5步的盲编样本之外
 3. 记下：哪些段落难以归类？哪些定义模糊？是否需要新代码？
 4. 修改编码手册，另存为 `codebook_v0.2.yaml`，把版本号改成 "0.2"
 5. 在 `codebook/CHANGELOG.md` 里写清楚改了什么、为什么、是哪几段促成的
 
 ## 4. LLM编码（约30分钟）
 
-```bash
-export ANTHROPIC_API_KEY=你的key
+Windows PowerShell（本机用这个）：
+```powershell
+$env:ANTHROPIC_API_KEY = "你的key"
 python 03_llm_code.py --limit 20     # 先试20段，读一读结果合不合理
 python 03_llm_code.py                # 再跑全部
 ```
 
-用 DeepSeek 等兼容接口：
-```bash
-export LLM_PROVIDER=openai
-export OPENAI_API_KEY=你的key
-export OPENAI_BASE_URL=https://api.deepseek.com
-export LLM_MODEL=deepseek-chat
+用 DeepSeek 等兼容接口（PowerShell）：
+```powershell
+$env:LLM_PROVIDER = "openai"
+$env:OPENAI_API_KEY = "你的key"
+$env:OPENAI_BASE_URL = "https://api.deepseek.com"
+$env:LLM_MODEL = "deepseek-chat"
 python 03_llm_code.py
 ```
+
+macOS/Linux 把 `$env:X = "..."` 换成 `export X=...`。
 
 脚本会自动使用版本号最高的编码手册。中途断了可以直接重跑，已经编过的不会重复调用。
 
@@ -74,6 +77,7 @@ python 03_llm_code.py
 ```bash
 python 04_sample_manual.py
 ```
+（脚本会排除第3步的30段，并在公司内按"新闻稿类/储备报告"比例分层抽样）
 1. 用 Excel 打开 `analysis/manual_coding.csv`
 2. **不要看LLM的结果**，自己给每段在适用的代码列填 1
 3. 有疑问写在 `notes` 列
