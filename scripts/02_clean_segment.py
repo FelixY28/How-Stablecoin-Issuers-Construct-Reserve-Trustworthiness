@@ -25,6 +25,13 @@ BOILERPLATE = re.compile(
     r"(cookie|subscribe|newsletter|all rights reserved|privacy policy|terms of (use|service)|"
     r"follow us|share this|sign up|read more|back to top|©)", re.I)
 
+# Lines and paragraphs that frequency-based header detection misses because they occur on
+# only 1-2 pages (found in step 2 QA of the BDO reports, 2026-11-22):
+# running header such as "TETHER INTERNATIONAL, S.A. DE C.V. | Independent Auditor's Report Page 2 of 3"
+RUNNING_HEADER = re.compile(r"\|.*\bPage \d+ of \d+\s*$", re.I)
+# auditor letterhead (BDO Italia legal registration block and office list)
+LETTERHEAD = re.compile(r"(Sede Legale|Codice Fiscale|Partita IVA|Registro dei Revisori|^Bari, Bologna)", re.I)
+
 
 def norm_space(s: str) -> str:
     return re.sub(r"\s+", " ", s).strip()
@@ -108,7 +115,8 @@ def pdf_paragraphs(path, page_spec: str = "") -> tuple[list[str], int]:
             if not s:
                 flush()
                 continue
-            if _line_key(s) in repeated or re.fullmatch(r"(page\s*)?\d+(\s*of\s*\d+)?", s, re.I):
+            if (_line_key(s) in repeated or RUNNING_HEADER.search(s)
+                    or re.fullmatch(r"(page\s*)?\d+(\s*of\s*\d+)?", s, re.I)):
                 continue
             if is_heading(s):
                 flush()
@@ -150,7 +158,7 @@ def main():
         # hand-saved .txt files (X posts, media quotes) are curated: keep short lines such as
         # "We wear your loathing with pride." that the length filter would otherwise drop
         min_chars = 1 if path.suffix == ".txt" else MIN_CHARS
-        kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120])]
+        kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120]) and not LETTERHEAD.search(p)]
         # drop exact duplicates within a document
         seen, unique = set(), []
         for p in kept:
