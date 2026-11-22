@@ -75,10 +75,16 @@ def parse_pages(spec: str, n: int) -> list[int]:
     return [i for i in idx if 0 <= i < n]
 
 
+def decode_cid(text: str) -> str:
+    """Some subset fonts (e.g. two Circle reserve reports) lack a Unicode map and come out as
+    '(cid:N)'. In those files glyph N is character N+29 ('(cid:42)' = 'G'); decode them."""
+    return re.sub(r"\(cid:(\d+)\)", lambda m: chr(int(m.group(1)) + 29), text)
+
+
 def pdf_paragraphs(path, page_spec: str = "") -> tuple[list[str], int]:
     with pdfplumber.open(path) as pdf:
         # use_text_flow follows the PDF's content order, which keeps multi-column layouts readable
-        pages = [(pdf.pages[i].extract_text(use_text_flow=True) or "")
+        pages = [decode_cid(pdf.pages[i].extract_text(use_text_flow=True) or "")
                  for i in parse_pages(page_spec, len(pdf.pages))]
     n_pages = len(pages)
     total_chars = sum(len(p) for p in pages)
