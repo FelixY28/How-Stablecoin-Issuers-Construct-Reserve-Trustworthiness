@@ -1,0 +1,272 @@
+segment_id,AUTH_STATE,AUTH_PROF,AUTH_MARKET,AUTH_TECH,AUTH_POLITICAL,SELF_ASSURANCE,HEDGE_PENDING,REBUTTAL,CONFIRMATION,uncertain,rationale,codebook_version,model
+T-PR-20250912-p001,0,0,0,0,1,1,0,0,0,0,Invokes dollar dominance as a goal and asserts transparency as grounds for trust.,0.2,deepseek-chat
+T-PR-20250912-p002,1,0,0,0,1,1,1,0,0,0,"Planned U.S.-regulated stablecoin invokes regulation as trust ground while signaling not-yet-achieved status, asserts transparent reserves and strong governance, and frames American leadership.",0.2,deepseek-chat
+T-PR-20250912-p003,0,0,1,0,0,0,0,0,0,0,"Invokes market capitalization, transaction volumes, and user numbers as evidence of USD₮'s reliability and dominance.",0.2,deepseek-chat
+T-PR-20250912-p004,0,0,1,0,0,0,0,0,0,0,"Invokes scale, Treasury holdings and global adoption as proof of reliability.",0.2,deepseek-chat
+T-PR-20250912-p005,1,0,0,0,0,1,1,0,0,0,"Invokes U.S. regulation and strict regulatory standards as trust grounds, but frames the coin as future ('will be established', 'designed to'), and asserts transparent reserves/backing itself.",0.2,deepseek-chat
+T-PR-20250912-p006,1,0,1,0,0,0,1,0,0,0,"The token is 'designed to comply' with the GENIUS Act (pending), invokes a federally regulated bank as compliant issuer (state authority), and cites Tether's unmatched global distribution network as grounds for trust.",0.2,deepseek-chat
+T-PR-20250912-p007,0,0,0,0,1,1,0,0,0,0,"Invokes dollar dominance and asserts its own transparency, compliance and resilience standards.",0.2,deepseek-chat
+T-PR-20250912-p008,1,0,0,0,0,0,0,0,0,0,Invokes the appointee's regulatory/policy background and understanding of American regulatory priorities as grounds for trust in launching USA₮.,0.2,deepseek-chat
+T-PR-20250912-p009,1,0,1,0,1,1,0,0,0,0,"Invokes a decade-long track record and global adoption, a U.S. regulatory framework, dollar dominance, and self-asserted transparency and resilience as grounds for trust.",0.2,deepseek-chat
+T-PR-20250912-p010,1,0,0,0,1,1,1,0,0,0,"Invokes U.S. regulation, dollar dominance, a pre-launch ('prepare for its launch') status, and self-asserted compliance/transparency.",0.2,deepseek-chat
+T-PR-20250912-p011,1,0,0,0,1,1,0,0,0,0,"Invokes U.S.-regulated status, dollar strength in the global economy, and self-asserted transparency/resilience as grounds for trust.",0.2,deepseek-chat
+T-PR-20250912-p012,0,0,0,0,0,0,0,0,0,0,A link for more information with no trust claim.,0.2,deepseek-chat
+T-PR-20250912-p013,1,0,1,0,0,0,1,0,0,0,"Invokes U.S. regulation as trust ground, signals the launch is still pending, and cites Tether's market leadership.",0.2,deepseek-chat
+T-PR-20250912-p014,0,0,0,0,1,1,0,0,0,0,Invokes U.S. dominance/leadership and asserts its own strong governance and value as grounds for legitimacy.,0.2,deepseek-chat
+T-PR-20250912-p015,0,0,0,0,0,0,0,0,0,0,Legal disclaimers about non-government backing and lack of insurance are not used as grounds for trust.,0.2,deepseek-chat
+T-PR-20250912-p016,0,0,0,0,0,0,0,0,0,0,Neutral statement identifying the issuer bank; no trust claim or regulatory framing used as grounds for trust.,0.2,deepseek-chat
+T-MQ-20251126-p001,0,0,0,0,0,0,0,1,0,0,"The paragraph states Tether directly disputes S&P Global's rating, a specific external criticism.",0.2,deepseek-chat
+T-MQ-20251126-p002,0,0,1,0,0,1,0,0,0,0,"Invokes a decade-long track record and resilience through crises as proof of reliability, asserted by the issuer itself.",0.2,deepseek-chat
+T-MQ-20251126-p003,0,0,1,0,0,0,0,0,0,0,Invokes redemption history as proof of reliability.,0.2,deepseek-chat
+T-X-20251126-p001,0,0,0,0,0,0,0,0,0,0,This is only an address line to S&P with no substantive claim or rebuttal content.,0.2,deepseek-chat
+T-X-20251126-p002,0,0,0,0,0,0,0,0,0,0,A defiant rhetorical statement with no claim about trustworthiness or legitimacy.,0.2,deepseek-chat
+T-X-20251126-p003,0,0,0,0,0,0,0,1,0,0,"The paragraph disputes the credibility of rating agencies and their models, responding to ratings criticism.",0.2,deepseek-chat
+T-X-20251126-p004,0,0,0,0,0,0,0,1,0,0,"The paragraph disputes criticism from traditional finance, framing it as propaganda against companies that defy the existing financial system.",0.2,deepseek-chat
+T-X-20251126-p005,0,0,0,0,0,1,0,0,0,0,Issuer asserts its own overcapitalization and reserve quality as proof of trustworthiness without external validation.,0.2,deepseek-chat
+T-X-20251130-p001,0,0,0,0,0,0,0,0,0,0,A bare heading referencing 'Tether FUD' with no argument or claim about trustworthiness.,0.2,deepseek-chat
+T-X-20251130-p002,0,0,0,0,0,0,0,0,0,0,"This is a heading introducing an attestation announcement, not a substantive trust claim.",0.2,deepseek-chat
+T-X-20251130-p003,0,0,0,0,0,1,0,0,0,0,The issuer asserts its own reserve buffer and equity as grounds for financial strength/backing without invoking an external party.,0.2,deepseek-chat
+T-X-20251130-p004,0,0,1,0,0,0,0,0,0,0,Cites excess equity and reserves as evidence of financial strength backing trust in the stablecoin.,0.2,deepseek-chat
+T-X-20251130-p005,0,0,0,0,0,0,0,0,0,0,Financial figures reported without being used as grounds for trust.,0.2,deepseek-chat
+T-X-20251130-p006,0,0,0,0,0,0,0,1,0,0,Directly disputes S&P's assessment by arguing it overlooked equity and profits.,0.2,deepseek-chat
+T-X-20251130-p007,0,0,0,0,0,0,0,1,0,0,The paragraph directly disputes critics/influencers by questioning their math or motives.,0.2,deepseek-chat
+T-X-20251130-p008,0,0,0,0,0,0,0,0,0,0,A lyrical slogan with no claim about trustworthiness or legitimacy.,0.2,deepseek-chat
+T-PR-20260127-p001,1,0,0,0,0,0,0,0,0,0,"Invokes federal regulation, the GENIUS Act framework and a federally regulated bank issuer as grounds for trust.",0.2,deepseek-chat
+T-PR-20260127-p002,1,0,0,0,0,0,1,0,0,0,"Invokes the U.S. federal regulatory regime as grounds for trust while framing the token as 'built to operate within' it, signaling compliance not yet fully achieved.",0.2,deepseek-chat
+T-PR-20260127-p003,0,0,1,0,1,0,1,0,0,0,"Invokes dollar dominance and geopolitical competition, cites USD₮ scale and operational maturity as grounds for trust, and hedges that a federal oversight framework is only 'potential' and the token is 'designed for' institutions.",0.2,deepseek-chat
+T-PR-20260127-p004,1,0,1,0,0,0,1,0,0,0,"Invokes market leadership/adoption, signals GENIUS Act compliance is still in progress, and cites issuance through a nationally chartered bank as trust grounds.",0.2,deepseek-chat
+T-PR-20260127-p005,1,0,0,1,0,1,1,0,0,0,"Invokes GENIUS Act framework and bank-grade compliance as trust grounds, says designed to operate within (pending), cites on-chain transparency, and asserts integrated risk management.",0.2,deepseek-chat
+T-PR-20260127-p006,0,0,1,0,1,0,0,0,0,0,Invokes size/scale and Treasury holdings as proof of reliability while framing USD₮ as supporting international use of the dollar.,0.2,deepseek-chat
+T-PR-20260127-p007,1,0,1,0,1,0,0,0,0,0,"Invokes federal regulation, a decade-long track record of trust, and 'made in America' national framing as grounds for trust.",0.2,deepseek-chat
+T-PR-20260127-p008,1,0,0,0,1,1,1,0,0,0,"Invokes federal regulatory expectations as a design goal (pending compliance), asserts own stability/transparency/governance, and frames US leadership in dollar innovation.",0.2,deepseek-chat
+T-PR-20260127-p009,0,0,0,0,0,0,0,0,0,0,Neutral product availability announcement with no trust or legitimacy claim.,0.2,deepseek-chat
+T-PR-20260127-p010,0,0,0,0,0,0,0,0,0,0,This is a navigational link with no trust claim.,0.2,deepseek-chat
+T-PR-20260127-p011,1,0,1,0,0,0,0,0,0,0,"Invokes U.S. regulation and regulatory standards as grounds for trust, and cites Tether's status as global leader in stablecoin technology.",0.2,deepseek-chat
+T-PR-20260127-p012,0,0,0,0,1,1,0,0,0,0,Invokes U.S. dominance/leadership and asserts strong governance and value as grounds for legitimacy.,0.2,deepseek-chat
+T-PR-20260127-p013,0,0,0,0,0,0,0,0,0,0,Legal disclaimer clarifying what the token is not; no trust or legitimacy claim.,0.2,deepseek-chat
+T-PR-20260127-p014,0,0,0,0,0,0,0,0,0,0,"A neutral corporate clarification of issuer identity, not used as grounds for trust.",0.2,deepseek-chat
+T-PR-20260324-p001,0,1,1,0,0,1,1,0,0,0,"Invokes Big Four audit as trust ground, but audit is only engaged/slated (pending), while asserting transparency commitment and category leadership.",0.2,deepseek-chat
+T-PR-20260324-p002,0,0,1,0,0,1,0,0,0,0,"Market cap and user base are invoked as proof of standard-setting reliability, plus a self-asserted claim of responsible infrastructure and dedication.",0.2,deepseek-chat
+T-PR-20260324-p003,0,1,0,0,0,1,0,0,0,0,"Invokes Big Four audit as recognized assurance while asserting full backing, liquidity and world-class risk management.",0.2,deepseek-chat
+T-PR-20260324-p004,0,1,0,0,0,1,0,0,0,0,Invokes a Big Four audit firm as grounds for trust while asserting its own transparency leadership.,0.2,deepseek-chat
+T-PR-20260324-p005,0,1,0,0,0,1,1,0,0,0,"Invokes audit firms and attestation standards as trust grounds, signals the full audit is not yet complete, and self-asserts rigorous systems and industry significance.",0.2,deepseek-chat
+T-PR-20260324-p006,0,1,0,0,0,1,1,0,0,0,"Issuer asserts its own transparency, resilience and prudent management, cites the ongoing independent audit as visibility, and signals the audit is not yet complete.",0.2,deepseek-chat
+T-PR-20260324-p007,0,1,0,0,0,1,1,0,0,0,"CEO frames the audit as accountability and confidence-building, invokes audit standards as trust grounds, and signals the audit is still being pursued ('years of work to strengthen our systems so that Tether can meet').",0.2,deepseek-chat
+T-PR-20260324-p008,0,0,0,0,0,1,1,0,0,0,"The paragraph asserts its own governance and controls while signaling the full independent audit is still being prepared for, not completed.",0.2,deepseek-chat
+T-PR-20260324-p009,0,1,0,0,0,0,0,0,1,0,Invokes Big Four audit standard as grounds for trust and frames the audit as confirming the issuer already meets that standard.,0.2,deepseek-chat
+T-PR-20260324-p010,0,0,0,0,0,1,1,0,0,0,Frames the audit as still in progress (progress toward) while asserting the issuer's own commitment to openness and responsibility.,0.2,deepseek-chat
+T-PR-20260324-p011,0,0,0,0,0,1,0,0,0,0,"Issuer asserts its own reserve strength, liquidity and conservative management as trust grounds without external party.",0.2,deepseek-chat
+T-PR-20260324-p012,0,0,0,0,0,1,0,0,0,0,The issuer asserts its own transparency and public visibility into reserves without invoking an external party.,0.2,deepseek-chat
+T-PR-20260324-p013,0,0,0,0,0,0,0,0,0,0,"Describes law enforcement collaboration as an activity, not framed as grounds for trust or legitimacy.",0.2,deepseek-chat
+T-PR-20260324-p014,0,0,0,0,0,1,0,0,0,0,"The issuer asserts its own compliance, risk systems and reliability as grounds for trust without naming an external party.",0.2,deepseek-chat
+T-PR-20260324-p015,0,0,1,0,0,1,0,0,0,0,"Asserts the token's trust and wide use as its own claim, invoking market adoption as grounds for trust.",0.2,deepseek-chat
+T-PR-20260324-p016,0,0,0,0,0,0,0,0,0,0,"General vision and mission statement about financial freedom, not a trust or legitimacy claim.",0.2,deepseek-chat
+T-PR-20260324-p017,0,0,0,0,0,1,1,0,0,0,"The full audit is framed as an aim not yet achieved, while the issuer asserts its own trust foundation.",0.2,deepseek-chat
+T-PR-20260813-p001,0,1,0,0,0,0,0,0,0,0,Invokes an independent auditor's unqualified opinion as grounds for trust.,0.2,deepseek-chat
+T-PR-20260813-p002,0,1,1,0,0,0,0,0,0,0,"Invokes KPMG's independent audit and professional standards as grounds for trust, and cites scale/market leadership ('largest company', 'largest inaugural audit') as validation.",0.2,deepseek-chat
+T-PR-20260813-p003,0,1,0,0,0,0,0,0,0,0,Invokes KPMG's unqualified audit opinion and GAAP standards as grounds for trust.,0.2,deepseek-chat
+T-PR-20260813-p004,0,1,0,0,0,0,0,0,0,0,Invokes KPMG's physical inspection and independent substantive testing as grounds for trust in reserves and financials.,0.2,deepseek-chat
+T-PR-20260813-p005,0,1,1,0,0,0,0,1,0,0,"Invokes completed financial statement audit as trust ground, directly disputes detractors' claims, and cites industry leadership from the start.",0.2,deepseek-chat
+T-PR-20260813-p006,0,1,0,0,0,0,0,0,0,0,Invokes KPMG's audit under AICPA standards and an unqualified opinion as grounds for trust.,0.2,deepseek-chat
+T-PR-20260813-p007,0,1,0,0,0,1,0,0,0,0,Invokes a Big Four audit as validation and asserts the company holds itself to leading-company standards and transparency.,0.2,deepseek-chat
+T-PR-20260813-p008,0,1,0,0,0,0,0,0,1,0,"Invokes independent attestations and a completed financial statement audit as trust grounds, framing the audit as fulfilling an existing commitment.",0.2,deepseek-chat
+T-PR-20260813-p009,0,0,0,0,0,0,0,0,0,0,"General statement about stablecoins' role in financial infrastructure, not used as grounds for trusting the issuer or its reserves.",0.2,deepseek-chat
+T-PR-20260813-p010,0,1,0,0,0,1,0,0,0,0,Invokes independent scrutiny/examination of financial statements as trust ground while asserting Tether sets a higher accountability standard.,0.2,deepseek-chat
+T-PR-20260813-p011,0,1,1,0,0,1,0,0,0,0,"Invokes the signed audit opinion as proof of stability, cites 650 million users' reliance as evidence of trust, and asserts evolved governance and resilience.",0.2,deepseek-chat
+C-PR-20251212-p001,0,0,0,0,0,0,1,0,0,0,"Headline frames GENIUS Act compliance as a milestone still being pursued (conditional approval), signaling compliance not yet achieved.",0.2,deepseek-chat
+C-PR-20251212-p002,1,0,0,0,0,0,0,0,0,0,Invokes OCC conditional approval of a national trust bank charter as grounds for trust.,0.2,deepseek-chat
+C-PR-20251212-p003,1,0,0,0,0,0,1,0,0,0,Invokes OCC oversight and GENIUS Act as trust grounds while signaling approval is conditional and requirements not yet met.,0.2,deepseek-chat
+C-PR-20251212-p004,1,0,0,0,0,1,0,0,0,0,Invokes regulatory oversight and a trust bank charter as grounds for trust while asserting its own commitment to high compliance standards.,0.2,deepseek-chat
+C-PR-20251212-p005,1,0,0,0,0,0,1,0,0,0,"Invokes a national trust bank charter and regulatory oversight as grounds for trust, while framing the charter as something that would (not yet) enhance oversight and alignment.",0.2,deepseek-chat
+C-PR-20251212-p006,1,0,0,0,0,0,0,0,1,0,"Invokes OCC approval, NYDFS BitLicense, MiCA and other licences as grounds for trust, and frames the OCC conditional approval as building on Circle's existing regulatory track record.",0.2,deepseek-chat
+C-PR-20251212-p007,1,0,0,0,0,0,0,0,0,0,Invokes regulated affiliates and regulatory authorizations as grounds for trust in USDC issuance.,0.2,deepseek-chat
+C-PR-20251212-p008,1,0,0,0,0,1,0,0,0,0,Calls USDC network 'regulated' as a trust marker and asserts 'trusted' financial innovation.,0.2,deepseek-chat
+C-YR-2025-p001,1,0,0,0,0,0,0,0,0,0,Invokes regulatory clarity across jurisdictions as grounds for stablecoins' mainstream legitimacy.,0.2,deepseek-chat
+C-YR-2025-p002,0,0,0,0,0,1,0,0,0,0,The issuer asserts its own assets as 'trusted digital assets' and frames itself as a full-stack platform without invoking an external party.,0.2,deepseek-chat
+C-YR-2025-p003,0,0,1,0,0,0,0,0,0,0,Invokes institutional and commercial adoption by banks and platforms as evidence of reliability.,0.2,deepseek-chat
+C-YR-2025-p004,0,0,0,0,0,0,0,0,0,0,General promotional claim about building the internet economy with no trust or legitimacy argument.,0.2,deepseek-chat
+C-YR-2025-p005,0,0,0,0,0,0,0,0,0,0,General mission and vision statement with no claim about trustworthiness or legitimacy grounds.,0.2,deepseek-chat
+C-YR-2025-p006,1,0,0,0,0,0,0,0,0,0,Invokes enacted regulatory frameworks across jurisdictions as recognition/legitimacy for fully reserved stablecoins.,0.2,deepseek-chat
+C-YR-2025-p007,1,0,0,0,0,1,1,0,0,0,"The paragraph asserts its own transparency, governance and risk management, invokes conditional approval for a national trust charter as regulatory grounding, and signals the charter is not yet final.",0.2,deepseek-chat
+C-YR-2025-p008,0,0,0,0,0,0,0,0,0,0,This is a product and strategy description without claims used as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p009,0,0,0,0,0,0,0,0,0,0,General mission and product-benefit framing with no claim about the issuer's trustworthiness or legitimacy.,0.2,deepseek-chat
+C-YR-2025-p010,0,0,0,0,0,0,0,0,0,0,"This is an organizational overview of the document's sections, not a trust claim.",0.2,deepseek-chat
+C-YR-2025-p011,1,0,0,0,0,0,0,0,0,0,"Invokes clear rules and supervision as necessary grounds for a durable platform, framing regulation as trust foundation.",0.2,deepseek-chat
+C-YR-2025-p012,1,0,0,0,0,0,0,0,1,0,Invokes the GENIUS Act as legal framework and frames it as aligning with and affirming Circle's existing standards.,0.2,deepseek-chat
+C-YR-2025-p013,1,0,0,0,0,0,1,0,0,0,"Invokes OCC conditional approval and federal banking oversight as trust grounds, while signaling the trust bank is proposed and not yet fully approved.",0.2,deepseek-chat
+C-YR-2025-p014,1,0,0,0,0,0,0,0,0,0,"Invokes MiCA compliance, DFSA approval and ADGM licensing as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p015,1,0,0,0,0,1,0,0,0,0,"Invokes FATF Travel Rule compliance and membership networks as grounds for trust, and asserts the platform provides robust compliance coverage.",0.2,deepseek-chat
+C-YR-2025-p016,0,0,0,0,0,0,0,0,0,0,"General market narrative about industry developments and demand, not used as grounds for trust in the issuer.",0.2,deepseek-chat
+C-YR-2025-p017,0,0,0,0,0,0,0,0,0,0,Describes market engagement and product use cases without invoking regulation as grounds for trust or asserting the issuer's trustworthiness.,0.2,deepseek-chat
+C-YR-2025-p018,1,0,0,0,0,1,0,0,0,0,"Invokes regulated, fully reserved stablecoins and a major exchange's endorsement as grounds for legitimacy.",0.2,deepseek-chat
+C-YR-2025-p019,1,0,0,0,0,0,0,0,0,0,Invokes MiCA compliance and institutional partnership as grounds for treating stablecoins as legitimate settlement instruments.,0.2,deepseek-chat
+C-YR-2025-p020,0,0,0,0,0,0,0,0,0,0,Describes partner integrations and adoption plans without using them as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p021,0,0,0,0,0,0,0,0,0,0,Descriptive announcement of partnerships and integrations with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p022,0,0,0,0,0,0,0,0,0,0,Partnership and product descriptions with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p023,0,0,0,0,0,0,0,0,0,0,Describes exchange partnerships and product adoption without using them as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p024,0,0,1,0,0,0,0,0,0,0,The paragraph cites exchange partnerships and integrations as evidence of USDC's market adoption and liquidity.,0.2,deepseek-chat
+C-YR-2025-p025,0,0,0,0,0,0,0,0,0,0,Descriptive account of partnerships and developer activity with no trust claim about the issuer or its reserves.,0.2,deepseek-chat
+C-YR-2025-p026,0,0,0,0,0,0,0,0,0,0,Descriptive account of acquisitions and partnerships with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p027,0,0,0,0,0,0,0,0,0,0,Forward-looking product/technology discussion with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p028,1,0,0,0,0,1,0,0,0,0,"Invokes named regulations (GENIUS, MiCA, DFSA) and banking supervision as grounds for institutional confidence, and asserts Circle's stablecoins are 'fully reserved'.",0.2,deepseek-chat
+C-YR-2025-p029,0,0,0,0,0,0,0,0,0,0,"General industry outlook about exploring Circle assets, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p030,0,0,0,0,0,0,0,0,0,0,A slogan-like tagline with no trust argument or external validation.,0.2,deepseek-chat
+C-YR-2025-p031,0,0,1,0,0,0,0,0,0,0,"Invokes market cap growth, transaction volume, and industry-leading liquidity as evidence of reliability.",0.2,deepseek-chat
+C-YR-2025-p032,0,0,1,1,0,0,0,0,0,0,"Invokes market cap growth, adoption and onchain transaction volume as evidence of reliability, plus onchain data and crosschain infrastructure as trust grounds.",0.2,deepseek-chat
+C-YR-2025-p033,0,0,1,0,0,0,0,0,0,0,"Invokes liquidity, trading depth and market adoption metrics as evidence of USDC's strengthened reliability and market position.",0.2,deepseek-chat
+C-YR-2025-p034,0,0,1,0,0,0,0,0,0,0,"The paragraph uses trading spreads, slippage and execution quality as evidence of USDC's market reliability and resilience.",0.2,deepseek-chat
+C-YR-2025-p035,1,0,0,0,0,1,0,0,1,0,"Invokes regulatory alignment and reserve transparency as existing advantages, framed as reinforced by external developments confirming Circle's approach.",0.2,deepseek-chat
+C-YR-2025-p036,1,0,1,0,0,0,0,0,0,0,Invokes MiCA regulatory clarity as grounds for demand and cites market cap leadership as proof of reliability.,0.2,deepseek-chat
+C-YR-2025-p037,1,0,0,0,0,0,0,0,0,0,"The paragraph cites 'regulatory compliance' as part of what makes EURC a credible euro-denominated counterpart, invoking compliance as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p038,1,0,0,0,0,0,0,0,0,0,Invokes alignment with local regulatory regimes as grounds for trust in EURC.,0.2,deepseek-chat
+C-YR-2025-p039,0,0,0,0,0,0,0,0,0,0,A heading/title with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p040,0,0,0,0,0,0,0,0,0,0,"Reports AUM growth and market ranking as financial figures, not as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p041,0,0,0,0,0,0,0,0,0,0,Describes product expansion and technical features without using them as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p042,0,0,0,0,0,0,0,0,0,0,"Product description of USYC's features and use cases, not framed as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p043,1,0,0,0,0,1,0,0,0,0,Invokes regulatory alignment as a driver of trust and asserts the issuer's own regulatory-first approach as grounds for confidence.,0.2,deepseek-chat
+C-YR-2025-p044,0,0,0,0,0,0,0,0,0,0,"A descriptive heading about applications, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p045,0,0,0,0,0,0,0,0,0,0,Product and infrastructure description without trust claims.,0.2,deepseek-chat
+C-YR-2025-p046,0,0,0,0,0,0,0,0,0,0,Heading/title with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p047,0,0,0,0,0,0,0,0,0,0,Describes problems with the existing cross-border payments system without making a trust claim about the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p048,0,0,0,0,0,0,0,0,0,0,"Product description of CPN and its features, with no claim about trustworthiness or legitimacy.",0.2,deepseek-chat
+C-YR-2025-p049,0,0,0,0,0,0,0,0,0,0,"Product description of CPN features and compliance integrations, not framed as grounds for trusting the issuer or its stablecoin.",0.2,deepseek-chat
+C-YR-2025-p050,0,0,0,0,0,0,0,0,0,0,Describes product use cases and demand without invoking trust or legitimacy grounds.,0.2,deepseek-chat
+C-YR-2025-p051,0,0,0,0,0,0,0,0,0,0,Describes partner payment flows and product functionality without invoking them as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p052,0,0,1,0,0,0,0,0,0,0,Invokes live institutional participants and network adoption as evidence of the product's reliability and maturity.,0.2,deepseek-chat
+C-YR-2025-p053,0,0,0,0,0,0,0,0,0,0,A heading listing product expansions with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p054,0,0,0,0,0,0,0,0,0,0,"General description of expanding liquidity and interoperability infrastructure, not framed as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p055,0,0,0,0,0,0,0,0,0,0,Product and feature description with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p056,0,0,1,0,0,0,0,0,0,0,"The paragraph invokes USDC's breadth of blockchain availability and rapid expansion as evidence of a high standard and institutional appeal, a market-adoption ground for trust.",0.2,deepseek-chat
+C-YR-2025-p057,0,0,1,0,0,0,0,0,0,0,"Cites cumulative volume, transfer counts and industry adoption as evidence of reliability.",0.2,deepseek-chat
+C-YR-2025-p058,0,0,0,0,0,0,0,0,0,0,"Product description of Gateway's crosschain functionality and adoption, not framed as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p059,0,0,0,1,0,0,0,0,0,0,"The paragraph invokes reduced trust assumptions from depositing in Circle xReserve rather than third-party bridges, a technical/verifiability trust claim.",0.2,deepseek-chat
+C-YR-2025-p060,0,0,0,0,0,0,0,0,0,0,"Product description of Mint, CCTP, Gateway and xReserve with no trust or legitimacy claim grounded in an external or self-assurance basis.",0.2,deepseek-chat
+C-YR-2025-p061,0,0,0,0,0,0,0,0,0,0,This is a heading/title with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p062,0,0,0,0,0,0,0,0,0,0,Product description of FX tools without claims about trustworthiness or legitimacy.,0.2,deepseek-chat
+C-YR-2025-p063,0,0,0,0,0,0,0,0,0,0,Product description of StableFX and Partner Stablecoins with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p064,0,0,0,0,0,0,0,0,0,0,Describes a product architecture and partner list without making a trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p065,0,0,0,0,0,0,0,0,0,0,Forward-looking vision of a multi-currency network with no trust claim grounded in external or self-assurance.,0.2,deepseek-chat
+C-YR-2025-p066,0,0,0,0,0,0,0,0,0,0,Heading/title with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p067,0,0,0,0,0,0,0,0,0,0,Product description of wallet infrastructure without invoking trust or verification grounds.,0.2,deepseek-chat
+C-YR-2025-p068,0,0,0,0,0,0,0,0,0,0,"Product description of developer tools and gas features, not tied to trust or verification.",0.2,deepseek-chat
+C-YR-2025-p069,0,0,0,0,0,0,0,0,0,0,Describes a product integration and technical capability without invoking it as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p070,0,0,0,0,0,0,0,0,0,0,Product and use-case description with no trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p071,0,0,0,0,0,0,0,0,0,0,Product and technology description without a trust or legitimacy claim.,0.2,deepseek-chat
+C-YR-2025-p072,0,0,0,0,0,0,0,0,0,0,"General reflection on progress and adoption without invoking trust, regulation, or verification as grounds for confidence.",0.2,deepseek-chat
+C-YR-2025-p073,0,0,0,0,0,0,0,0,0,0,"General statement about extending utility with builders, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p074,0,0,0,0,0,0,0,0,0,0,Describes adoption and a program's membership figures without using them as grounds for trust.,0.2,deepseek-chat
+C-YR-2025-p075,0,0,0,0,0,0,0,0,0,0,Describes ecosystem activity and adoption without invoking it as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p076,0,0,0,0,0,0,0,0,0,0,"A heading describing distribution strategy, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p077,0,0,0,0,0,0,0,0,0,0,Describes a partnership and user benefit without invoking trust or legitimacy grounds.,0.2,deepseek-chat
+C-YR-2025-p078,1,0,0,0,0,1,0,0,0,0,"The paragraph calls USDC 'fully reserved, regulated' and frames trusted local institutions as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p079,0,0,0,0,0,0,0,0,0,0,"Heading describing a product use case, not a trust claim.",0.2,deepseek-chat
+C-YR-2025-p080,0,0,0,0,0,0,0,0,0,0,Describes cross-border payment pain points and partner activity without invoking trust or legitimacy grounds.,0.2,deepseek-chat
+C-YR-2025-p081,0,0,0,0,0,0,0,0,0,0,"Product use-case description of USDC as a settlement asset, not a trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p082,0,0,0,0,0,0,0,0,0,0,Describes a partner's use case and product benefits without invoking trust or legitimacy grounds for the issuer.,0.2,deepseek-chat
+C-YR-2025-p083,0,0,0,0,0,0,0,0,0,0,"General product advocacy for stablecoin settlement without invoking trust, regulation, audit or track record as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p084,0,0,0,0,0,0,0,0,0,0,Describes a partner's use of USDC for payroll without invoking it as grounds for trust in the issuer or reserves.,0.2,deepseek-chat
+C-YR-2025-p085,0,0,0,0,0,0,0,0,0,0,"Product benefit description about payment efficiency, not a claim about trustworthiness or legitimacy.",0.2,deepseek-chat
+C-YR-2025-p086,0,0,0,0,0,0,0,0,0,0,General product vision about payroll infrastructure; no trust or legitimacy claim grounded in an authority.,0.2,deepseek-chat
+C-YR-2025-p087,0,0,0,0,0,0,0,0,0,0,"A heading naming mission and initiatives, with no trust claim.",0.2,deepseek-chat
+C-YR-2025-p088,0,0,0,0,0,0,0,0,0,0,"Describes a philanthropic initiative without invoking trust, regulation, audit, or market performance as grounds for legitimacy.",0.2,deepseek-chat
+C-YR-2025-p089,0,0,0,0,0,0,0,0,0,0,"Describes a foundation's mandate and inclusion as a design principle; no claim about trustworthiness, backing, or external validation.",0.2,deepseek-chat
+C-YR-2025-p090,0,0,0,0,0,0,0,0,0,0,Product description of Arc blockchain with no claim used as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p091,0,0,0,0,0,0,0,0,0,0,"Descriptive account of an acquisition, testnet launch and participant list, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-YR-2025-p092,0,0,0,0,0,0,0,0,0,0,"Product description of connectivity and liquidity, not framed as grounds for trust.",0.2,deepseek-chat
+C-YR-2025-p093,0,0,0,0,0,0,0,0,0,0,"General product description of Arc's features without invoking trust, verification, or external validation.",0.2,deepseek-chat
+C-YR-2025-p094,0,0,0,0,0,1,0,0,0,0,"The paragraph asserts Arc provides the foundation for 'trusted digital assets' and predictable fees, a self-asserted trustworthiness claim without external validation.",0.2,deepseek-chat
+C-YR-2025-p095,0,0,0,0,0,0,0,0,0,0,A heading-like phrase about product scope with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p096,0,0,0,0,0,0,0,0,0,0,Describes a collaborative demonstration of technology without invoking it as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p097,0,0,0,0,0,0,0,0,0,0,Describes hackathon projects and a thesis about AI agents and onchain infrastructure without invoking trust or legitimacy grounds.,0.2,deepseek-chat
+C-YR-2025-p098,0,0,0,0,0,0,0,0,0,0,Describes community events and onchain experiments without invoking them as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p099,0,0,0,0,0,0,0,0,0,0,Community growth and developer activity are reported without being used as grounds for trust in the issuer or its stablecoin.,0.2,deepseek-chat
+C-YR-2025-p100,0,0,0,0,0,0,0,0,0,0,"Describes ecosystem grants and developer activity without invoking trust, verification, or regulatory grounds.",0.2,deepseek-chat
+C-YR-2025-p101,0,0,0,0,0,0,0,0,0,0,A heading-like slogan with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p102,0,0,0,0,0,0,0,0,0,0,Product description of Arc's role and roadmap without a trust claim grounded in an external or self-assurance basis.,0.2,deepseek-chat
+C-YR-2025-p103,0,0,0,0,0,0,0,0,0,0,Forward-looking vision for Arc with no trust claim grounded in external authority or self-assurance about backing/governance.,0.2,deepseek-chat
+C-YR-2025-p104,0,0,0,0,0,0,0,0,0,0,A heading with no trust claim.,0.2,deepseek-chat
+C-YR-2025-p105,0,0,0,0,0,0,0,0,0,0,"General outlook and vision about the future of onchain finance, with no trust claim or external validation invoked.",0.2,deepseek-chat
+C-YR-2025-p106,0,0,0,0,0,1,0,0,1,0,"Issuer asserts its own trusted assets and institutional-grade infrastructure, and frames 2025 regulatory milestones as validating its existing approach.",0.2,deepseek-chat
+C-PR-20260225-p001,0,0,0,0,0,0,0,0,0,0,Announcement of earnings results with no trust or legitimacy claim.,0.2,deepseek-chat
+C-PR-20260225-p002,0,0,0,0,0,0,0,0,0,0,Heading with no trust claim.,0.2,deepseek-chat
+C-PR-20260225-p003,0,0,0,0,0,0,0,0,0,0,Financial and volume figures reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p004,0,0,0,0,0,0,0,0,0,0,Financial figure reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p005,0,0,0,0,0,0,0,0,0,0,A financial figure reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p006,0,0,0,0,0,0,0,0,0,0,Financial figure reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p007,0,0,0,0,0,0,0,0,0,0,Heading with no trust claim.,0.2,deepseek-chat
+C-PR-20260225-p008,0,0,0,0,0,0,0,0,0,0,Financial figure reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p009,0,0,0,0,0,0,0,0,0,0,Financial results reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p010,0,0,0,0,0,0,0,0,0,0,Financial figure reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p011,0,0,0,0,0,0,0,0,0,0,Product performance metrics for a testnet reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p012,0,0,0,0,0,0,0,0,0,0,Reports network enrollment and transaction volume figures without using them as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p013,0,0,0,0,0,0,0,0,0,0,Financial growth figures reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p014,0,0,1,0,0,0,0,0,0,0,"Cites enterprise and institutional adoption (Visa, Intuit, Polymarket, Bermuda) as evidence of momentum and reliability.",0.2,deepseek-chat
+C-PR-20260225-p015,0,0,0,0,0,0,0,0,0,0,Reports a partner's settlement capability without using it as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p016,0,0,0,0,0,0,0,0,0,0,Describes a partnership announcement without invoking it as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p017,0,0,0,0,0,0,0,0,0,0,Describes a partnership and product use without invoking it as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p018,0,0,0,0,0,0,0,0,0,0,Announcement of a government partnership without invoking it as grounds for trust or legitimacy.,0.2,deepseek-chat
+C-PR-20260225-p019,1,0,0,0,0,0,0,0,0,0,"Invokes OCC conditional approval of a national trust bank as strengthening USDC infrastructure, grounding trust in regulatory supervision.",0.2,deepseek-chat
+C-PR-20260225-p020,0,0,0,0,0,0,0,0,0,0,CEO quote reports adoption and product progress without invoking any external authority or trust claim.,0.2,deepseek-chat
+C-PR-20260225-p021,0,0,0,0,0,0,0,0,0,0,Heading with no trust claim.,0.2,deepseek-chat
+C-PR-20260225-p022,0,0,0,0,0,0,0,0,0,0,"A table heading introducing financial results, with no trust claim.",0.2,deepseek-chat
+C-PR-20260225-p023,0,0,0,0,0,0,0,0,0,0,Heading with no trust claim.,0.2,deepseek-chat
+C-PR-20260225-p024,0,0,0,0,0,0,0,0,0,0,Financial results reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p025,0,0,0,0,0,0,0,0,0,0,Financial results reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p026,0,0,0,0,0,0,0,0,0,0,Accounting explanation of cost increases with no trust or legitimacy claim.,0.2,deepseek-chat
+C-PR-20260225-p027,0,0,0,0,0,0,0,0,0,0,Accounting explanation of expense figures with no trust or legitimacy claim.,0.2,deepseek-chat
+C-PR-20260225-p028,0,0,0,0,0,0,0,0,0,0,Financial expense figures reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p029,0,0,0,0,0,0,0,0,0,0,Financial results and accounting explanations reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p030,0,0,0,0,0,0,0,0,0,0,Financial results reported without being used as grounds for trust.,0.2,deepseek-chat
+C-PR-20260225-p031,0,0,0,0,0,0,0,0,0,0,"This is a neutral statement about providing guidance, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-PR-20260225-p032,0,0,0,0,0,0,0,0,0,0,"Heading with logistics information, no trust claim.",0.2,deepseek-chat
+C-PR-20260225-p033,0,0,0,0,0,0,0,0,0,0,"Logistical announcement about a conference call and webcast, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-PR-20260225-p034,0,0,0,0,0,0,0,0,0,0,"This is a disclosure-channel logistics paragraph, not a trust or legitimacy claim.",0.2,deepseek-chat
+C-PR-20260225-p035,0,0,0,0,0,0,0,0,0,0,General company and product description with promotional language but no claim about trustworthiness or legitimacy grounds.,0.2,deepseek-chat
+C-PR-20260225-p036,0,0,0,0,0,0,0,0,0,0,Heading with no trust claim.,0.2,deepseek-chat
+C-PR-20260225-p037,0,0,0,0,0,0,0,0,0,0,Accounting explanation of unaudited financial data preparation; no trust claim about the issuer or stablecoin.,0.2,deepseek-chat
+C-PR-20260225-p038,0,0,0,0,0,0,0,0,0,0,"Accounting explanation of GAAP and non-GAAP measures, not used as grounds for trust.",0.2,deepseek-chat
+C-PR-20260225-p039,0,0,0,0,0,0,0,0,0,0,Accounting explanation of non-GAAP measures with no trust or legitimacy claim.,0.2,deepseek-chat
+C-PR-20260225-p040,0,0,0,0,0,0,0,0,0,0,"This is a neutral accounting definition of Adjusted EBITDA, not a trust claim.",0.2,deepseek-chat
+C-PR-20260225-p041,0,0,0,0,0,0,0,0,0,0,"Accounting explanation of non-GAAP adjustments, not a trust claim.",0.2,deepseek-chat
+C-PR-20260225-p042,0,0,0,0,0,0,0,0,0,0,Accounting definition of a non-GAAP metric; no trust or legitimacy claim.,0.2,deepseek-chat
+C-PR-20260225-p043,0,0,0,0,0,0,0,0,0,0,"Accounting explanation of a non-GAAP adjustment, not a trust claim.",0.2,deepseek-chat
+C-PR-20260225-p044,0,0,0,0,0,0,0,0,0,0,Accounting reconciliation description with no trust claim.,0.2,deepseek-chat
+C-AL-2025-p001,0,0,0,0,0,0,0,0,0,0,General framing statement with no trust or legitimacy claim.,0.2,deepseek-chat
+C-AL-2025-p002,0,0,0,0,0,0,0,0,0,0,General self-promotion about execution and mission with no specific trust claim or external validation.,0.2,deepseek-chat
+C-AL-2025-p003,0,0,0,0,0,0,0,0,0,0,"General ambition and optimism about the company's future role, with no trust or legitimacy claim.",0.2,deepseek-chat
+C-AL-2025-p004,0,0,0,0,0,0,0,0,0,0,General pride and optimism about milestones with no specific trust claim or external validation.,0.2,deepseek-chat
+C-AL-2025-p005,0,0,0,0,0,1,0,0,0,0,"The issuer asserts its own disciplined building, operational rigor, transparency and accountability as grounds for trust, without naming an external authority.",0.2,deepseek-chat
+C-AL-2025-p006,1,0,0,0,0,0,0,0,1,0,Invokes the GENIUS Act federal framework as grounds for trust and frames it as validating Circle's long-held compliance-first approach.,0.2,deepseek-chat
+C-AL-2025-p007,0,0,0,0,0,0,0,0,0,0,"Product and platform expansion described without invoking trust, regulation, audit or market performance as grounds for confidence.",0.2,deepseek-chat
+C-AL-2025-p008,0,0,0,0,0,0,0,0,0,0,Partnership and network-effect description without a trust claim grounded in an external or self-asserted assurance.,0.2,deepseek-chat
+C-AL-2025-p009,0,0,0,0,0,0,0,0,0,0,General self-promotional framing about shaping the future with no specific trust claim or external validation.,0.2,deepseek-chat
+C-AL-2025-p010,0,0,0,0,0,0,0,0,0,0,General framing about technology and financial infrastructure with no trust or legitimacy claim about the issuer or its stablecoin.,0.2,deepseek-chat
+C-AL-2025-p011,0,0,0,0,0,0,0,0,0,0,"General description of blockchain and stablecoins as technology, not tied to trust or verification claims.",0.2,deepseek-chat
+C-AL-2025-p012,0,0,0,0,0,1,0,0,0,0,"Issuer asserts its own role providing 'trusted, regulated' infrastructure as grounds for trust, without naming an external regulator or standard.",0.2,deepseek-chat
+C-AL-2025-p013,0,0,0,0,0,0,0,0,0,0,Heading/title with no trust claim.,0.2,deepseek-chat
+C-AL-2025-p014,0,0,0,0,0,0,0,0,0,0,General strategic positioning with no trust or legitimacy claim.,0.2,deepseek-chat
+C-AL-2025-p015,0,0,0,0,0,0,0,0,0,0,A structural description of strategy with no trust or legitimacy claim.,0.2,deepseek-chat
+C-AL-2025-p016,0,0,0,0,0,0,0,0,0,0,"Product description of Arc's design goals; 'institutional-grade trust' is a design aspiration for the network, not an assurance about the issuer or its stablecoin reserves.",0.2,deepseek-chat
+C-AL-2025-p017,0,0,0,0,0,0,0,0,0,0,A financial line-item heading with no trust claim.,0.2,deepseek-chat
+C-AL-2025-p018,0,0,0,0,0,0,0,0,0,0,"Accounting definition and reconciliation reference, not a trust claim.",0.2,deepseek-chat
+C-AL-2025-p019,0,0,0,0,0,0,0,0,0,0,Product and infrastructure description with no trust or legitimacy claim grounded in an external or self-assurance basis.,0.2,deepseek-chat
+C-AL-2025-p020,0,0,0,0,0,0,0,0,0,0,A heading listing products with no trust claim.,0.2,deepseek-chat
+C-AL-2025-p021,1,0,1,0,0,1,0,0,0,0,"Invokes market share/adoption as proof of trust, asserts fully reserved/transparent/trusted digital money, and cites regulated status and regulatory clarity as grounds for legitimacy.",0.2,deepseek-chat
+C-AL-2025-p022,0,0,0,0,0,0,0,0,0,0,Product growth and positioning description without trust or legitimacy claims.,0.2,deepseek-chat
+C-AL-2025-p023,0,0,0,0,0,0,0,0,0,0,"A heading naming a product layer, with no trust claim.",0.2,deepseek-chat
+C-AL-2025-p024,0,0,0,0,0,0,0,0,0,0,Product and network growth description without trust or legitimacy claims.,0.2,deepseek-chat
+C-AL-2025-p025,0,0,0,0,0,0,0,0,0,0,Product and network description with no trust or legitimacy claim.,0.2,deepseek-chat
+C-AL-2025-p026,0,0,0,0,0,0,0,0,0,0,General strategic ambition and self-description with no specific trust claim grounded in an external or verifiable source.,0.2,deepseek-chat
+C-AL-2025-p027,0,0,0,0,0,1,0,0,0,0,"Circle asserts its own long-term discipline, governance and institutional credibility as grounds for trust without naming an external validator.",0.2,deepseek-chat
+C-AL-2025-p028,0,0,0,0,0,0,0,0,0,0,General gratitude and team appreciation with no trust or legitimacy claim.,0.2,deepseek-chat
+C-AL-2025-p029,0,0,0,0,0,0,0,0,0,0,General pride and optimism about the future with no claim about trustworthiness or external validation.,0.2,deepseek-chat
+C-AL-2025-p030,0,0,0,0,0,0,0,0,0,0,General pride and optimism about the future with no claim about trustworthiness or external validation.,0.2,deepseek-chat
+C-PR-20260710-p001,0,0,0,0,0,0,0,0,0,0,"A heading announcing a milestone and custody services, with no trust claim.",0.2,deepseek-chat
+C-PR-20260710-p002,1,0,0,0,0,0,0,0,0,0,Invokes OCC approval and national trust bank charter as grounds for legitimacy.,0.2,deepseek-chat
+C-PR-20260710-p003,1,0,1,0,0,0,1,0,0,0,"Invokes OCC charter and federal oversight as trust grounds, calls USDC the world's largest regulated stablecoin, and notes reserve management is only planned.",0.2,deepseek-chat
+C-PR-20260710-p004,1,0,0,0,0,1,0,0,0,0,"Invokes federal trust bank charter and fiduciary standards as grounds for trust, plus self-asserted safety and transparency.",0.2,deepseek-chat
+C-PR-20260710-p005,1,0,0,0,0,0,1,0,0,0,"Invokes OCC-approved business plan and federal regulatory oversight as grounds for trust, while framing future reserve management as designed to enable capabilities under oversight.",0.2,deepseek-chat
+C-PR-20260710-p006,1,0,0,0,0,1,0,0,0,0,"Invokes OCC approval and federal oversight as grounds for trust, and asserts the trust bank sets a new standard for transparency and governance.",0.2,deepseek-chat
+C-PR-20260710-p007,1,0,0,0,1,1,0,0,0,0,"Invokes OCC charter as grounds for trust, frames USDC as supporting the dollar's global role, and asserts 'trusted' infrastructure.",0.2,deepseek-chat
+C-PR-20260710-p008,1,0,0,0,0,0,0,0,0,0,"The paragraph invokes OCC approval, BitLicense, MiCA compliance and multiple licenses as grounds for trust.",0.2,deepseek-chat
+C-PR-20260710-p009,1,0,0,0,0,1,0,0,0,0,The boilerplate calls USDC part of the 'world's largest regulated stablecoin network' (regulatory status as trust) and asserts 'trusted' financial innovation.,0.2,deepseek-chat
