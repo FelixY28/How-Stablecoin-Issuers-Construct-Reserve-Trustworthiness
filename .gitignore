@@ -1,0 +1,7 @@
+# Raw downloads may be copyrighted: keep links in data/sources.csv instead of committing files
+data/raw/*
+!data/raw/.gitkeep
+data/llm_cache.jsonl
+.env
+__pycache__/
+.DS_Store

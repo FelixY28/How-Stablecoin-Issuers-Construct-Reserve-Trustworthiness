@@ -1,0 +1,10 @@
+event_id,date,label,phase_start,date_verified
+E1,2025-07-18,GENIUS Act signed into law,P1,yes
+E2,2025-09-12,Tether announces USAT and Bo Hines as CEO,,yes
+E3,2025-11-26,S&P downgrades USDT stability assessment to weak,P2,yes
+E4,2025-12-12,OCC conditional approval of Circle trust charter (approximate date - verify),,no
+E5,2026-01-27,USAT launches via Anchorage Digital,,yes
+E6,2026-03-24,Tether announces Big Four audit engagement,P3,yes
+E7,2026-07-10,OCC final approval of Circle National Trust,,yes
+E8,2026-08-13,Tether announces KPMG unqualified opinion on 2025 statements,P4,yes
+E9,2026-11-02,OCC final rule implementing GENIUS Act (approximate date - verify),,no
