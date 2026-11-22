@@ -175,7 +175,8 @@ def main():
         min_chars = 1 if path.suffix == ".txt" else MIN_CHARS
         is_issuer = m["doc_type"] != "attestation"
         kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120])
-                and not LETTERHEAD.search(p) and not (is_issuer and DISCLAIMER.search(p))]
+                and not LETTERHEAD.search(p) and not (is_issuer and DISCLAIMER.search(p))
+                and not sum(ch.isdigit() for ch in p) / len(p) > 0.3]  # table rows of figures
         # drop exact duplicates within a document
         seen, unique = set(), []
         for p in kept:

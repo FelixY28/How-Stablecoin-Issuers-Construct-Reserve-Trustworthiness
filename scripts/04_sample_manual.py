@@ -36,12 +36,16 @@ def has_codes(path) -> bool:
     return bool(codes) and filled[codes].notna().any().any()
 
 
-def stratified(segs: pd.DataFrame, n: int, seed: int) -> pd.DataFrame:
+def stratified(segs: pd.DataFrame, n: int, seed: int, issuer_share: float | None = None) -> pd.DataFrame:
+    """Per company: proportional to each doc group's size, or a fixed issuer-text share."""
     segs = segs.assign(doc_group=segs["doc_type"].eq("attestation").map({True: "attestation", False: "issuer"}))
     per_company = max(1, n // segs["company"].nunique())
     parts = []
     for _, comp in segs.groupby("company"):
         shares = comp["doc_group"].value_counts(normalize=True)
+        if issuer_share is not None:
+            shares = pd.Series({"issuer": issuer_share, "attestation": 1 - issuer_share})
+            shares = shares[shares.index.isin(comp["doc_group"].unique())]
         for grp, share in shares.items():
             g = comp[comp["doc_group"] == grp]
             k = min(len(g), max(1, round(per_company * share)))
@@ -55,6 +59,10 @@ def main():
     ap.add_argument("--n", type=int, default=None, help="sample size (default 30 with --dev, else 50)")
     ap.add_argument("--seed", type=int, default=42)
     ap.add_argument("--overwrite", action="store_true")
+    ap.add_argument("--issuer-share", type=float, default=None,
+                    help="fixed share of issuer texts per company (default: 2/3 with --dev, "
+                         "proportional otherwise). Decision 2026-11-22: the codebook targets issuer "
+                         "texts, so the dev sample is 10 issuer + 5 attestation segments per company")
     args = ap.parse_args()
 
     target = DEV if args.dev else MANUAL
@@ -73,7 +81,8 @@ def main():
         else:
             print("WARNING: no analysis/dev_coding.csv found; cannot exclude development segments.")
 
-    sample = stratified(segs, n, args.seed)
+    share = args.issuer_share if args.issuer_share is not None else (2 / 3 if args.dev else None)
+    sample = stratified(segs, n, args.seed, share)
     out = sample[["segment_id", "company", "doc_type", "date", "text"]].copy()
     for c in codes:
         out[c] = ""
