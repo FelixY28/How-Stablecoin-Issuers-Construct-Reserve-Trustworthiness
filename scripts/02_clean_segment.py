@@ -147,7 +147,10 @@ def main():
         else:
             paras = txt_paragraphs(path)
 
-        kept = [p for p in paras if len(p) >= MIN_CHARS and not BOILERPLATE.search(p[:120])]
+        # hand-saved .txt files (X posts, media quotes) are curated: keep short lines such as
+        # "We wear your loathing with pride." that the length filter would otherwise drop
+        min_chars = 1 if path.suffix == ".txt" else MIN_CHARS
+        kept = [p for p in paras if len(p) >= min_chars and not BOILERPLATE.search(p[:120])]
         # drop exact duplicates within a document
         seen, unique = set(), []
         for p in kept:

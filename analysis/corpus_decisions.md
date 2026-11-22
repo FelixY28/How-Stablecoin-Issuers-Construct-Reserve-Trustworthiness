@@ -7,7 +7,8 @@ Every decision about what enters the corpus, with the reason. Audit trail alongs
 - **Decision:** include both, as separate documents with different `doc_type`: `media_quote` (T-MQ-20251126) and `x_post` (T-X-20251126, T-X-20251130).
 - **Reason:** they are different channels of evidence talk. Keeping them apart lets the analysis compare what the company says officially, what the CEO says personally, and what reaches readers through a journalist's selection.
 - **Caveat:** the media quote is secondary; the journalist chose which sentences appear.
-- **Open:** whether T-X-20251130 (reply to Arthur Hayes, four days after S&P) is in scope.
+- **T-X-20251130 in scope:** although it replies to Arthur Hayes, the post names S&P's method directly ("S&P made the same mistake..."). Text copied by hand from X on 2026-11-22.
+- **Open:** the CEO's X bio says "Views are my own". Decide whether x_post documents are excluded, kept but reported separately from official texts, or pooled.
 
 ## D2 — GENIUS Act signing-day statements (E1), 2026-11-22
 - **Problem:** neither issuer published a statement on the signing day. Nearest texts: Circle's blog on House passage (2025-07-17, falls in P0) and Tether's Q2 2025 attestation press release (late July, a different genre).
