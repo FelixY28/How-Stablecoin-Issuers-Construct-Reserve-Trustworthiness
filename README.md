@@ -1,6 +1,6 @@
 # Evidence Talk: How Stablecoin Issuers Construct Reserve Trustworthiness (2025–2026)
 
-A small mixed-methods study of how Tether and Circle build claims of reserve trustworthiness in their public texts, from the signing of the US GENIUS Act (July 2025) to the OCC's final implementing rule (October 2026).
+A small mixed-methods study of how Tether and Circle build claims of reserve trustworthiness in their public texts, from the signing of the US GENIUS Act (July 2025) to Tether's first full audit result (August 2026).
 
 > Status: work in progress. Findings below are placeholders until the coding is complete.
 
@@ -10,14 +10,14 @@ How did Tether and Circle construct *evidence* of reserve trustworthiness in the
 
 Sub-questions:
 1. Which sources of authority does each issuer invoke: the state, professional bodies, market performance, technology, or politics?
-2. Do the claims shift around key events (S&P downgrade, Big Four audit announcement, audit result, OCC rule)?
+2. Do the claims shift around key events (S&P downgrade, Big Four audit announcement, audit result)?
 3. How does the assurance claimed in press releases compare with the assurance actually provided in attestation reports?
 
 ## Data
 
 | Type | Scope |
 |---|---|
-| Issuer texts | Press releases, blog posts and annual letters around nine key events (see `data/events.csv`) |
+| Issuer texts | Press releases, blog posts, annual letters, CEO posts on X and media-quoted statements around eight key events (see `data/events.csv`); `doc_type` records the channel |
 | Attestation reports | Four reserve reports per issuer (Tether: BDO; Circle: monthly reserve reports) |
 
 All sources are public. `data/sources.csv` lists every document with its URL; `data/metadata.csv` records retrieval time and a SHA-256 hash of each file. Raw files are not committed.
@@ -40,10 +40,11 @@ _To be written after analysis. See `memo.md`._
 
 ## Limitations
 
-- Small corpus, limited to issuers' own texts.
+- Small corpus, limited to issuers' own texts, plus one statement known only through a journalist's selection of quotes.
 - One human coder.
 - Shares are descriptive; no statistical inference is attempted.
-- Some event dates are approximate (flagged in `data/events.csv`).
+- All event dates verified against primary sources (`data/events.csv`). Corpus decisions and their reasons are logged in `analysis/corpus_decisions.md`.
+- No issuer statement exists for the GENIUS Act signing day; the gap is reported, not filled with substitutes.
 
 ## Future work
 

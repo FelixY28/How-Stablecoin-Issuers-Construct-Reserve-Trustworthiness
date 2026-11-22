@@ -100,7 +100,7 @@ python 06_analysis.py
 ## 7. 细读（约1.5小时）
 
 1. 读 `examples_by_code.md`，对照图表，写分析备忘录（直接写在 `memo.md` 草稿区，或另建笔记）
-2. 重点读四个关键事件前后的文本：S&P降级、宣布四大审计、KPMG结果、OCC最终规则
+2. 重点读四个关键事件前后的文本：S&P降级、宣布四大审计、KPMG结果（E9 OCC最终规则因无文本已移出，见 analysis/corpus_decisions.md）
 3. 完成 `report_comparison.md`，比较报告实际提供的保证程度，与新闻稿里的说法
 4. 检验设计文档中的四个假设：哪些成立？哪些被推翻？
 
